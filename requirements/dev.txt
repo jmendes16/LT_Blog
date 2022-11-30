@@ -1,0 +1,4 @@
+-r production.txt
+asgiref==3.5.2
+sqlparse==0.4.3
+tzdata==2022.7
