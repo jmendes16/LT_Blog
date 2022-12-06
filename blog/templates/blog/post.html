@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block page_name %}
+    Blog - {{post_title}}
+{% endblock %}
+
+{% block page_heading %}
+    Learning and Technology - Blog
+{% endblock %}
+
+{% block page_content %}
+    <h2>{{post_title}}</h2>
+    <h3>
+        {{post_content}}
+    </h3>
+{% endblock %}

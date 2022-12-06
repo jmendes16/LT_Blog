@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block page_name %}
+    Blog
+{% endblock %}
+
+{% block page_heading %}
+    Learning and Technology - Blog
+{% endblock %}
+
+{% block page_content %}
+    This is the blog
+    <ul>
+        {% for post in posts %}
+        <li><a href="/blog/{{post}}">{{post}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
