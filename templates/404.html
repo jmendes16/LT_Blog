@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block page_name %}
+    Page Not Found
+{% endblock %}
+
+{% block page_heading %}
+    Learning and Technology - HTTP 404 Page Not Found
+{% endblock %}
+
+{% block page_content %}
+    Sorry we couldn't find the page that you were looking for.  
+
+    This is a HTTP 404 error (Hypertext Transfer Protocol 404 error) 
+    which means you have requested to view a resource that the server could not find.  
+
+    Other common HTTP codes include 100 which is means the server has received the 
+    start of the request and is ready for the rest of it.  
+    200 means that everything went as expected with your request at it was successful.  
+    400 the server cannot process your request due to an error made on the client side.
+    403 "Forbidden" the server recieved your request, which was valid, but you are currently 
+    forbidden from receiving the resource.  
+    502 "Bad Gateway" the server required information from another server to respond to 
+    your request but was unable to get to it.  
+{% endblock %}
