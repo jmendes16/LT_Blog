@@ -8,11 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block page_name %}Learning and Technology{% endblock %}</title>
     <link rel="stylesheet" href="{% static "styles.css" %}">
+    <link rel="stylesheet" href="{% static "navbar.css" %}">
     {% block css_files %}{% endblock  %}
 </head>
 <body>
-    <h1>{% block page_heading %}{% endblock %}</h1>
     {% include "./includes/navbar.html" %}
-    <p>{% block page_content %}{% endblock %}</p>
+    <div style="margin-left:230px">
+    <div>
+        <h1>{% block page_heading %}{% endblock %}</h1>
+    </div>
+    <div>
+        <p>{% block page_content %}{% endblock %}</p>
+    </div>
+    </div>
 </body>
 </html>

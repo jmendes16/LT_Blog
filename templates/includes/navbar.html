@@ -1,4 +1,20 @@
-<div>
-    <span><a href="{% url "home" %}">Home</a></span>
-    <span><a href="{% url "blog:blog_index" %}">Blog</a></span>
+{% load static %}
+
+<div class="navwrapper" style="width:25%">
+    <div class="sidebar">
+        <ul>
+            <li>
+                {% url "home" as home_url %}
+                {% if request.path == home_url %}<a href="{% url "home" %}" class="active">{% else %}<a href="{% url "home" %}">{% endif %}
+                    <span class="item">Home</span>
+                </a>
+            </li>
+            <li>
+                {% url "blog:blog_index" as blog_url %}
+                {% if request.path == blog_url %}<a href="{% url "blog:blog_index" %}" class="active">{% else %}<a href="{% url "blog:blog_index" %}">{% endif %}
+                    <span class="item">Blog</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

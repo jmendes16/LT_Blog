@@ -1,0 +1,36 @@
+.navwrapper .sidebar{
+    position:fixed;
+    list-style-type: none;
+    text-decoration: none;
+    background: #252526;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.navwrapper .sidebar ul{
+    list-style-type: none;
+}
+
+.navwrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #252526;
+    font-size: 16px;
+    position: relative;
+}
+
+.navwrapper .sidebar ul li a:hover,
+.navwrapper .sidebar ul li a.active{
+    color: #c586c0;
+    background:#333333;
+    border-right: 2px solid #1e1e1e;
+}
+
+.navwrapper .sidebar ul li a:hover:before,
+.navwrapper .sidebar ul li a.active:before{
+    display: block;
+}
