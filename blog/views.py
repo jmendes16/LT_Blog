@@ -17,7 +17,8 @@ def blog_post(request, post):
     try:
         return render(request, 'blog/post.html', {
             'post_title':post,
-            'post_content':blog_posts[post]
+            'post_content':blog_posts[post],
+            'posts':blog_posts.keys
             })
     except:
        raise Http404()

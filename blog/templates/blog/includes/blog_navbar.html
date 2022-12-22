@@ -10,10 +10,17 @@
                 </a>
             </li>
             <li>
-                {% url "blog:blog_index" as blog_url %}
-                <a href="{% url "blog:blog_index" %}" {% if request.path == blog_url %} class="active"{% endif %}>
+                <a href="{% url "blog:blog_index" %}" class="active">
                     <span class="item">Blog</span>
                 </a>
+                <ul>
+                    {% for post in posts %}
+                    {% url "blog:entries" post=post as blog_entry %}
+                    <li><a href="{% url "blog:entries" post=post %}" {% if request.path == blog_entry %} class="active"{% endif %}>
+                        <span class="item">{{post}}</span>
+                    </a></li>
+                    {% endfor %}
+                </ul>
             </li>
         </ul>
     </div>
